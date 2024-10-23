@@ -152,6 +152,7 @@ data:
   enable-ipv6-masquerade: "true"
   enable-tcx: "true"
   datapath-mode: "veth"
+  enable-bpf-masquerade: "true"
   enable-masquerade-to-route-source: "false"
   enable-wireguard: "true"
   wireguard-persistent-keepalive: "0s"
@@ -169,6 +170,7 @@ data:
   kube-proxy-replacement-healthz-bind-address: ""
   bpf-lb-sock: "false"
   bpf-lb-sock-terminate-pod-connections: "false"
+  bpf-lb-sock-hostns-only: "true"
   nodeport-addresses: ""
   enable-health-check-nodeport: "true"
   enable-health-check-loadbalancer-ip: "false"
@@ -1123,7 +1125,7 @@ spec:
     metadata:
       annotations:
         # ensure pods roll when configmap updates
-        cilium.io/cilium-configmap-checksum: "242dc4829ebd8b5c0f25e3126721c2dc8b3bd0b36563bddbf6fc00d7d2637b63"
+        cilium.io/cilium-configmap-checksum: "614cb5ce34a4f98afe23a2b8292c1c6f27f3a2052c3842b3c656256d736daeb6"
       labels:
         io.cilium/app: operator
         name: cilium-operator
