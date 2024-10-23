@@ -153,6 +153,9 @@ data:
   enable-tcx: "true"
   datapath-mode: "veth"
   enable-masquerade-to-route-source: "false"
+  enable-wireguard: "true"
+  wireguard-persistent-keepalive: "0s"
+  encrypt-node: "true"
 
   enable-xt-socket-fallback: "true"
   install-no-conntrack-iptables-rules: "false"
@@ -1120,7 +1123,7 @@ spec:
     metadata:
       annotations:
         # ensure pods roll when configmap updates
-        cilium.io/cilium-configmap-checksum: "eed443d8681b69790680a5d898e8a92611b9fc25c65fb4762eaa1f301bc26409"
+        cilium.io/cilium-configmap-checksum: "242dc4829ebd8b5c0f25e3126721c2dc8b3bd0b36563bddbf6fc00d7d2637b63"
       labels:
         io.cilium/app: operator
         name: cilium-operator
